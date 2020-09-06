@@ -254,7 +254,7 @@ int main(int argc, char* argv[]){
 	dest_addr.sll_ifindex = interface;
 	dest_addr.sll_halen = ETH_ALEN;
 	dest_addr.sll_protocol = htons(ETH_P_ARP);
-	memcpy(&(dest_addr.sll_addr), &dest_ip, sizeof(dest_addr.sll_addr));
+	memcpy(&(dest_addr.sll_addr), &dest_mac, sizeof(dest_addr.sll_addr));
 
 	/* ============================================================================
 							O P E N   R A W   S O C K E T 
